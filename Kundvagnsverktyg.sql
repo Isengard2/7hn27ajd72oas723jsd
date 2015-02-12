@@ -90,7 +90,7 @@ INSERT INTO `processor` VALUES ('10','AMD A8-6600K Black Edition','4','4','FM2',
 
 
 
-DROPTABLE IF EXISTS ` Computercases`;
+DROP TABLE IF EXISTS ` Computercases`;
 CREATE TABLE `computercases` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 ` Name` int(11) NOT Null DEFAULT'',
