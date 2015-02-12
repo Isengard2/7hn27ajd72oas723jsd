@@ -92,11 +92,11 @@ INSERT INTO `processor` VALUES ('10','AMD A8-6600K Black Edition','4','4','FM2',
 
 DROP TABLE IF EXISTS ` Computercases`;
 CREATE TABLE `computercases` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-` Name` int(11) NOT Null DEFAULT'',
+`id` int (11) NOT NULL AUTO_INCREMENT,
+` Name` int (11) NOT Null DEFAULT'',
  `formfactor` enum('missing', 'ATX','mATX','mITX','eATX','FlexATX','mini-DTX','XL-ATX','HPTX','SSI-CEB','SSI-EEB') NOT NULL DEFAULT 'missing'
- ´Width mm` int(11) NOT NULL
- `Height mm` int(11) NOT NULL
+ ´Width mm` int (11) NOT NULL
+ `Height mm` int (11) NOT NULL
  `Depth mm`  int (11) NOT NULL
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=901 DEFAULT=utf8;
