@@ -15,8 +15,8 @@ DROP TABLE IF EXISTS `hard drive`;
 CREATE TABLE `hard drive` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` int(11) NOT NULL DEFAULT '',
-  `unit` enum('saknas','SSD','HDD','HDD+SSD') NOT NULL DEFAULT 'saknas',
-  `form factor` enum('saknas','2.5"','3.5"') NOT NULL DEFAULT 'saknas',
+  `unit` enum('missing','SSD','HDD','HDD+SSD') NOT NULL DEFAULT 'missing',
+  `form factor` enum('missing','2.5"','3.5"') NOT NULL DEFAULT 'missing',
   `width mm` int(11) NOT NULL,
   `depth mm` int(11) NOT NULL,
   `heigh mm` int(11) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `ram` (
   `total size` varchar(100) NOT NULL,
   `size` int(11) NOT NULL DEFAULT '1',
   `amount` int(11) NOT NULL DEFAULT '1',
-  `technology` enum('saknas','DDR3','DDR4') NOT NULL DEFAULT 'saknas',
+  `technology` enum('missing','DDR3','DDR4') NOT NULL DEFAULT 'missing',
   `heigh inch` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=901 DEFAULT utf8;
@@ -69,9 +69,9 @@ CREATE TABLE `processor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` int(11) NOT NULL DEFAULT '',
   `cores` varchar(100) NOT NULL,
-  `theards` int(11) NOT NULL DEFAULT '',
+  `threads` int(11) NOT NULL DEFAULT '',
   `power` int(11) NOT NULL DEFAULT '',
-  `sockel` enum('missing','AM1','AM1+','AM2','AM2+','AM3','AM3+','FM2','FM2+','LGA775','LGA1150','LGA1155','LGA2011','LGA2011-v3') NOT NULL DEFAULT 'saknas',
+  `sockel` enum('missing','AM1','AM1+','AM2','AM2+','AM3','AM3+','FM2','FM2+','LGA775','LGA1150','LGA1155','LGA2011','LGA2011-v3') NOT NULL DEFAULT 'missing',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=901 DEFAULT CHARSET=utf8;
 
@@ -85,3 +85,29 @@ INSERT INTO `processor` VALUES ('7','AMD FX-6300 Black Edition','6','6','AM3+','
 INSERT INTO `processor` VALUES ('8','AMD FX-8350 Black Edition','8','8','AM3+','125W');
 INSERT INTO `processor` VALUES ('9','AMD Athlon X4 860k Black Edition','4','4','FM2+','95W');
 INSERT INTO `processor` VALUES ('10','AMD A8-6600K Black Edition','4','4','FM2','100W');
+
+
+
+
+
+DROPTABLE IF EXISTS ` Computercases`;
+CREATE TABLE `computercases` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+` Name` int(11) NOT Null DEFAULT'',
+ `formfactor` enum('missing', 'ATX','mATX','mITX','eATX','FlexATX','mini-DTX','XL-ATX','HPTX','SSI-CEB','SSI-EEB') NOT NULL DEFAULT 'missing'
+ ´Width mm` int(11) NOT NULL
+ `Height mm` int(11) NOT NULL
+ `Depth mm`  int (11) NOT NULL
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=901 DEFAULT=utf8;
+
+INSERT INTO `Computercases` VALUES ('1', 'Fractal Design define r4 Black' 'ATX/mATX/MiTX');
+INSERT INTO `Computercases` VALUES ('2', 'NZXT h440 Silent ultra white' 'ATX/mATX/mITX');
+INSERT INTO `Computercases` VALUES ('3', 'Be quiet! Silent Base 800 black' 'ATX/mATX/mITX');
+INSERT INTO `Computercases` VALUES ('4', ' Bitfenix Neos White' 'ATX/mATX/mITX');
+INSERT INTO `Computercases` VALUES ('5', ' Corsair obsidian 750D' 'ATX/mATX''mITX/E-ATX/XL-ATX/HPTX');
+INSERT INTO `Computercases` VALUES ('6', 'Phanteks Enthoo Luxe white' 'ATX/mATX/E-ATX/SSI-EEB');
+INSERT INTO `Computercases` VALUES ('7', ' Zalman Z12 black' '/ATX/mATX');
+INSERT INTO `Computercases` VALUES ('8', 'Silverstone Temjin TJ08B-E black' 'mATX/mITX/Mini-DTX',);
+INSERT INTO `Computercases` VALUES ('9', ' Cooler Master Storm trooper' 'ATX/mATX/XL-ATX',);
+INSERT INTO `Computercases` VALUES ('10', ' Antec GX500''ATX/mATX/mITX',);
